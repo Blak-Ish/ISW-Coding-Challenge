@@ -12,7 +12,7 @@ The Online Bookstore is a Java-based web application designed to manage book inv
 - **H2 Console**: Access the H2 database console at `{BASEURL}/h2-ui`. Username is "sa" with no password required.
 - **Spring Security**: Equipped with Spring Security for authentication and authorization.
 - **JWT-Based Token**: Uses JWT-based token authentication. Sample token can be obtained under the login endpoint `/login` with test credentials: `{ "username":"test", "password":"test" }`.
-- **Architectural Diagram**: An architectural diagram of the application is available in the resource folder.
+- **High level Diagram**: A High level diagram of the application is available in the root as `High Level Diagram.png`.
 
 ## Prerequisites
 
@@ -43,13 +43,22 @@ Before running the application, ensure the following prerequisites are met:
    ```shell
    java -jar target/bookstore.jar
 
-## API Documentation
+## API Documentation - POSTMAN
+
+A postman collection containing all the APIS with examples saved has been provided in the root of the project
+this can be imported on postman , note to set the BASE_URL variable 
+   ```shell
+   Interswitch Book Store.postman_collection.json
+```
+
+## API Documentation - SWAGGER
 
 Explore the API endpoints and their usage by accessing the Swagger documentation:
 
    ```shell
    http://localhost:8080/swagger-ui.html
 ```
+
 
 ## Database Management
 

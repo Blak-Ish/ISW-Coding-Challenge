@@ -1,0 +1,1738 @@
+{
+	"info": {
+		"_postman_id": "4aa81f40-0f11-4e96-b528-215e2ceca488",
+		"name": "Interswitch Book Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5764180"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Add book",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"EQyE22ooeW323233\",\n  \"genre\": \"FICTION\",\n  \"isbn\": \"72601693463408146602-92238180318-3-0-63517-8620-32-936296681759321465453363193020173814313735017231\",\n  \"author\": \"Superman\",\n  \"yearOfPub\": \"2021\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/books/add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add book example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"EQyE22ooeW323233\",\n  \"genre\": \"FICTION\",\n  \"isbn\": \"72601693463408146602-92238180318-3-0-63517-8620-32-936296681759321465453363193020173814313735017231\",\n  \"author\": \"Superman\",\n  \"yearOfPub\": \"2021\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/books/add",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:41:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Book added successfully\",\n    \"respBody\": {\n        \"id\": 2,\n        \"title\": \"EQyE22ooeW323233\",\n        \"genre\": \"FICTION\",\n        \"isbn\": \"72601693463408146602-92238180318-3-0-63517-8620-32-936296681759321465453363193020173814313735017231\",\n        \"author\": \"Superman\",\n        \"yearOfPub\": \"2021\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get book",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"title\": \"MybooksAgain\",\n    \"genre\": \"FICTION\",\n    \"isbn\": \"7260169346340814660-9818018-3-0-6517-8620-32-93696681759146545336319307381417250171\",\n    \"author\": \"string\",\n    \"yearOfPub\": \"2023\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/books/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Book Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"title\": \"MybooksAgain\",\n    \"genre\": \"FICTION\",\n    \"isbn\": \"7260169346340814660-9818018-3-0-6517-8620-32-93696681759146545336319307381417250171\",\n    \"author\": \"string\",\n    \"yearOfPub\": \"2023\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/books/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 18:01:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Book fetched successfully\",\n    \"respBody\": {\n        \"id\": 1,\n        \"title\": \"Super book\",\n        \"genre\": \"THRILLER\",\n        \"isbn\": \"100000-110020202\",\n        \"author\": \"Solomon grandy\",\n        \"yearOfPub\": \"1990\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Search for Books",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"title\": \"MybooksAgain\",\n    \"genre\": \"FICTION\",\n    \"isbn\": \"7260169346340814660-9818018-3-0-6517-8620-32-93696681759146545336319307381417250171\",\n    \"author\": \"string\",\n    \"yearOfPub\": \"2023\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/books/search?title&author=&year=&genre=FICTION",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null
+								},
+								{
+									"key": "author",
+									"value": ""
+								},
+								{
+									"key": "year",
+									"value": ""
+								},
+								{
+									"key": "genre",
+									"value": "FICTION"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search for Books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"title\": \"MybooksAgain\",\n    \"genre\": \"FICTION\",\n    \"isbn\": \"7260169346340814660-9818018-3-0-6517-8620-32-93696681759146545336319307381417250171\",\n    \"author\": \"string\",\n    \"yearOfPub\": \"2023\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/books/search?title&author=&year=&genre=FICTION",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books",
+										"search"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": null
+										},
+										{
+											"key": "author",
+											"value": ""
+										},
+										{
+											"key": "year",
+											"value": ""
+										},
+										{
+											"key": "genre",
+											"value": "FICTION"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 18:26:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respBody\": {\n        \"pageDetails\": {\n            \"number\": 0,\n            \"size\": 10,\n            \"totalPages\": 1,\n            \"numberElements\": 3,\n            \"totalElements\": 3\n        },\n        \"records\": [\n            {\n                \"id\": 4,\n                \"title\": \"Mybooks33\",\n                \"genre\": \"FICTION\",\n                \"isbn\": \"7260169346340814660-928180318-3-0-6517-8620-32-9369668175931465453363193007381431735017231\",\n                \"author\": \"Superman\",\n                \"yearOfPub\": \"1990\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Mybooks33\",\n                \"genre\": \"FICTION\",\n                \"isbn\": \"7260169346340814660-92818018-3-0-6517-8620-32-9369668175931465453363193007381431735017231\",\n                \"author\": \"Superman\",\n                \"yearOfPub\": \"2023\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Mybooks\",\n                \"genre\": \"FICTION\",\n                \"isbn\": \"7260169346340814660-92818018-3-0-6517-8620-32-936966817593146545336319300738143173501731\",\n                \"author\": \"Superman\",\n                \"yearOfPub\": \"2023\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Book",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"title\": \"MybooksAgain\",\n    \"genre\": \"FICTION\",\n    \"isbn\": \"7260169346340814660-9818018-3-0-6517-8620-32-93696681759146545336319307381417250171\",\n    \"author\": \"string\",\n    \"yearOfPub\": \"2023\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/books/update",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add book Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"title\": \"MybooksAgain\",\n    \"genre\": \"FICTION\",\n    \"isbn\": \"7260169346340814660-9818018-3-0-6517-8620-32-93696681759146545336319307381417250171\",\n    \"author\": \"string\",\n    \"yearOfPub\": \"2023\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/books/update",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 17:59:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Book updated successfully\",\n    \"respBody\": {\n        \"id\": 2,\n        \"title\": \"MybooksAgain\",\n        \"genre\": \"FICTION\",\n        \"isbn\": \"7260169346340814660-9818018-3-0-6517-8620-32-93696681759146545336319307381417250171\",\n        \"author\": \"string\",\n        \"yearOfPub\": \"2023\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Book",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"title\": \"MybooksAgain\",\n    \"genre\": \"FICTION\",\n    \"isbn\": \"7260169346340814660-9818018-3-0-6517-8620-32-93696681759146545336319307381417250171\",\n    \"author\": \"string\",\n    \"yearOfPub\": \"2023\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/books/delete/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get book Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"title\": \"MybooksAgain\",\n    \"genre\": \"FICTION\",\n    \"isbn\": \"7260169346340814660-9818018-3-0-6517-8620-32-93696681759146545336319307381417250171\",\n    \"author\": \"string\",\n    \"yearOfPub\": \"2023\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/books/delete/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:43:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Book deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Get cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/cart",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get cart example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/cart",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:43:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Cart fetched\",\n    \"respBody\": {\n        \"cartItems\": {\n            \"1\": {\n                \"bookId\": 1,\n                \"name\": \"Super book\",\n                \"isbn\": \"100000-110020202\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add book to cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/cart/add/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cart",
+								"add",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get cart Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/cart/add/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cart",
+										"add",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:41:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Book added to cart\",\n    \"respBody\": {\n        \"cartItems\": {\n            \"1\": {\n                \"bookId\": 1,\n                \"name\": \"Super book\",\n                \"isbn\": \"100000-110020202\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/cart/remove/3",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cart",
+								"remove",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add book to cart Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/cart/remove/2",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cart",
+										"remove",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:43:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Book removed from cart\",\n    \"respBody\": {\n        \"cartItems\": {\n            \"1\": {\n                \"bookId\": 1,\n                \"name\": \"Super book\",\n                \"isbn\": \"100000-110020202\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Clear cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/cart/clear",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cart",
+								"clear"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remove book Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/cart/clear",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cart",
+										"clear"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:31:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Cart emptied successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Checkout-WEB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"paymentMethod\": \"WEB\",\n  \"card\": {\n    \"number\": \"12345678908337\",\n    \"exYear\": \"25\",\n    \"exMonth\": \"12\",\n    \"cvv\": \"111\",\n    \"pin\": \"0000\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/order/checkout",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"order",
+								"checkout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"paymentMethod\": \"WEB\",\n  \"card\": {\n    \"number\": \"12345678908337\",\n    \"exYear\": \"25\",\n    \"exMonth\": \"12\",\n    \"cvv\": \"111\",\n    \"pin\": \"0000\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/order/checkout",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"order",
+										"checkout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:37:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Please enter the OTP sent to +23400000000009\",\n    \"respBody\": {\n        \"orderId\": 1,\n        \"status\": \"PENDING\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Checkout-TRANSFER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"paymentMethod\": \"TRANSFER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/order/checkout",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"order",
+								"checkout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Checkout-WEB Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"paymentMethod\": \"TRANSFER\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/order/checkout",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"order",
+										"checkout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:38:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Please complete your purchase by transferring into the account provided\",\n    \"respBody\": {\n        \"orderId\": 2,\n        \"status\": \"PENDING\",\n        \"bank\": \"SWITCH DIGITAL BANK\",\n        \"account\": \"1000000001\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Checkout-USSD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"paymentMethod\": \"USSD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/order/checkout",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"order",
+								"checkout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Checkout-TRANSFER Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"paymentMethod\": \"USSD\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/order/checkout",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"order",
+										"checkout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:41:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Please complete your purchase by dialing the ussd code on your phone\",\n    \"respBody\": {\n        \"orderId\": 1,\n        \"status\": \"PENDING\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Complete payment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/order/completePayment/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"order",
+								"completePayment",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Checkout-WEB Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/order/completePayment/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"order",
+										"completePayment",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:41:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respDescription\": \"Order completed successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Purchase History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/order/history",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"order",
+								"history"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Complete payment Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/order/history",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"order",
+										"history"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 20:41:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"respCode\": \"00\",\n    \"respBody\": {\n        \"pageDetails\": {\n            \"number\": 0,\n            \"size\": 10,\n            \"totalPages\": 1,\n            \"numberElements\": 1,\n            \"totalElements\": 1\n        },\n        \"orders\": [\n            {\n                \"items\": \"{\\\"1\\\":{\\\"bookId\\\":1.0,\\\"name\\\":\\\"Super book\\\",\\\"isbn\\\":\\\"100000-110020202\\\"}}\",\n                \"status\": \"COMPLETED\",\n                \"ussdCode\": \"*723*0000*12345678#\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Generate token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var json = JSON.parse(responseBody);",
+							"pm.collectionVariables.set(\"TOKEN\", json.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"test\",\n    \"password\":\"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
