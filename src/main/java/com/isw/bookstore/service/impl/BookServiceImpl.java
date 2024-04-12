@@ -32,8 +32,6 @@ public class BookServiceImpl implements BookService {
     @Override
     public ApiResponse addNewBook(BookDto bookDto) {
 
-        //TODO validate bookdto request
-
         if(bookRepository.existsByIsbn(bookDto.getIsbn())){
             throw  new BookExistsException("Book with ISBN ["+bookDto.getIsbn()+"] already exists");
         }
@@ -47,6 +45,8 @@ public class BookServiceImpl implements BookService {
                 .build();
 
         book = bookRepository.save(book);
+
+        bookDto.setId(bookDto.getId());
 
         return ApiResponse.builder()
                 .respCode("00")
